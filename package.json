@@ -1,0 +1,77 @@
+{
+  "name": "git-mcp",
+  "version": "1.0.0",
+  "description": "GitMCP is a tool that allows you to get the documentation for a given repository.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "deploy": "npm run build && wrangler deploy",
+    "dev": "react-router dev",
+    "preview": "vite preview",
+    "start": "wrangler dev",
+    "format": "biome format --write",
+    "lint:fix": "biome lint --fix",
+    "cf-typegen": "wrangler types",
+    "test": "vitest run",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write"
+    ],
+    "src/**/*.tsx": [
+      "prettier --write"
+    ],
+    "app/**/*.ts": [
+      "prettier --write"
+    ],
+    "app/**/*.tsx": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1+sha512.2d92c86b7928dc8284f53494fb4201f983da65f0fb4f0d40baafa5cf628fa31dae3e5968f12466f17df7e97310e30f343a648baea1b9b350685dafafffdf5808",
+  "dependencies": {
+    "@cloudflare/workers-oauth-provider": "^0.0.2",
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "@react-router/fs-routes": "^7.5.1",
+    "@remix-run/cloudflare": "^2.16.5",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "agents": "^0.0.57",
+    "hono": "^4.7.7",
+    "html-to-md": "^0.8.7",
+    "isbot": "^5.1.26",
+    "lucide-react": "^0.487.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.1",
+    "react-router-dom": "^7.5.1",
+    "typewriter-effect": "^2.21.0",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^0.1.21",
+    "@cloudflare/workers-types": "^4.20250418.0",
+    "@react-router/dev": "^7.5.1",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20.17.30",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "marked": "^15.0.8",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^1.6.1",
+    "workers-mcp": "0.1.0-3",
+    "wrangler": "^4.12.0"
+  }
+}
